@@ -8,9 +8,14 @@
     "test": "firebase emulators:exec --only firestore \"node_modules/.bin/jest --detectOpenHandles\"",
     "prepare": "npm run test && npm run build",
     "build": "tsc",
-    "release": "npm run test && release-it"
+    "format": "prettier --write \"src/**/*.ts\"",
+    "release": "release-it"
   },
-  "keywords": ["koa", "koa-session", "session"],
+  "keywords": [
+    "koa",
+    "koa-session",
+    "session"
+  ],
   "author": "Mike Sukmanowsky <mike.sukmanowsky@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -21,6 +26,7 @@
     "@types/koa-session": "^5.10.1",
     "jest": "^24.9.0",
     "koa-session": "^5.12.3",
+    "prettier": "1.19.1",
     "release-it": "^12.4.3",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.2"
@@ -30,6 +36,9 @@
     "koa-session": "5.12.x"
   },
   "release-it": {
+    "hooks": {
+      "before:init": ["npm run format", "npm test"]
+    },
     "github": {
       "release": true
     },
