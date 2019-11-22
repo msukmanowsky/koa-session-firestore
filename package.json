@@ -10,7 +10,7 @@
     "build": "tsc",
     "release": "npm run test && release-it"
   },
-  "keywords": [],
+  "keywords": ["koa", "koa-session", "session"],
   "author": "Mike Sukmanowsky <mike.sukmanowsky@gmail.com>",
   "license": "MIT",
   "devDependencies": {
