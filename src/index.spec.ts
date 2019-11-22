@@ -4,15 +4,13 @@ import { FirestoreStore } from "./index";
 const projectId = "koa-session-firestore";
 
 function authedApp(auth?: object) {
-  return firebase
-    .initializeTestApp({ projectId, auth })
-    .firestore();
+  return firebase.initializeTestApp({ projectId, auth }).firestore();
 }
 
 function sleep(timeoutMs: number) {
   return new Promise(resolve => {
     setTimeout(resolve, timeoutMs);
-  })
+  });
 }
 
 describe("basic tests", () => {
@@ -37,7 +35,12 @@ describe("basic tests", () => {
     const store = new FirestoreStore({ collectionName: "foo", db });
     const data = { foo: "bar" };
     await store.set("test", data);
-    expect(await db.collection("foo").doc("test").get()).toBeTruthy();
+    expect(
+      await db
+        .collection("foo")
+        .doc("test")
+        .get()
+    ).toBeTruthy();
     await store.destroy("test");
   });
 
@@ -49,5 +52,5 @@ describe("basic tests", () => {
     const ttl = 250;
     await sleep(500);
     expect(await store.get("test", ttl)).toBeUndefined();
-  })
+  });
 });

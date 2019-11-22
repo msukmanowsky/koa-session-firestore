@@ -9,7 +9,6 @@ export interface StoreOptions {
 }
 
 export class FirestoreStore {
-
   db: Firestore;
   collectionName: string;
 
@@ -44,12 +43,14 @@ export class FirestoreStore {
     }
 
     if (typeof ttl === "number") {
-      const updatedAt = snapshot.data()!.updatedAt.toMillis()
+      const updatedAt = snapshot.data()!.updatedAt.toMillis();
       if (Date.now() - updatedAt >= ttl) {
-        debug(`session ${sessionId} has outlived it's time to live, destroying`);
+        debug(
+          `session ${sessionId} has outlived it's time to live, destroying`
+        );
         await snapshot.ref.delete();
         return;
-      };
+      }
     }
 
     const data = JSON.parse(snapshot.data()!.data);
@@ -60,7 +61,6 @@ export class FirestoreStore {
     await this.db
       .collection(this.collectionName)
       .doc(sessionId)
-      .delete()
+      .delete();
   }
-
 }
