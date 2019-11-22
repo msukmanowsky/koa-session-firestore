@@ -11,6 +11,10 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "release": "release-it"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msukmanowsky/koa-session-firestore"
+  },
   "keywords": [
     "koa",
     "koa-session",
@@ -43,7 +47,7 @@
       "release": true
     },
     "npm": {
-      "publish": false,
+      "publish": true,
       "access": "public"
     }
   },

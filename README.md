@@ -5,7 +5,7 @@ A Firebase Firestore store for the Node [Koa Framework](https://koajs.com/).
 # Installation
 
 ```
-npm i --save msukmanowsky/koa-session-firestore
+npm i --save koa-session-firestore
 ```
 
 # Basic Usage
