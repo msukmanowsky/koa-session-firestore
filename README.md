@@ -11,3 +11,16 @@ npm i --save koa-session-firestore
 # Basic Usage
 
 See [example/server.js](example/server.js) for example usage.
+
+# Options
+
+```typescript
+import { FirestoreStore } from "koa-session-firestore";
+
+const store = new Firestore({
+    // Firestore instance
+    db: firebase.firestore(),
+    // Optional: default is sessions
+    collectionName: "something"
+});
+```
