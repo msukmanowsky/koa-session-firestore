@@ -6,7 +6,6 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "firebase emulators:exec --only firestore \"node_modules/.bin/jest --detectOpenHandles\"",
-    "prepare": "npm run test && npm run build",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "release": "release-it"
@@ -41,7 +40,7 @@
   },
   "release-it": {
     "hooks": {
-      "before:init": ["npm run format", "npm test"]
+      "before:init": ["npm run format", "npm test", "npm run build"]
     },
     "github": {
       "release": true
