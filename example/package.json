@@ -1,0 +1,19 @@
+{
+  "name": "koa-session-firestore-example",
+  "version": "0.1.0",
+  "description": "An example Koa server using koa-session-firestore",
+  "main": "index.js",
+  "scripts": {
+    "start": "GOOGLE_APPLICATION_CREDENTIALS=credentials.json node server.js"
+  },
+  "keywords": [],
+  "author": "Mike Sukmanowsky <mike.sukmanowsky@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^8.0.2",
+    "firebase-admin": "^8.8.0",
+    "koa": "^2.11.0",
+    "koa-session": "^5.12.3",
+    "koa-session-firestore": "github:msukmanowsky/koa-session-firestore"
+  }
+}

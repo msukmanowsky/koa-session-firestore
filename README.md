@@ -10,4 +10,4 @@ npm i --save msukmanowsky/koa-session-firestore
 
 # Basic Usage
 
-TODO: Fill this out.
+See [example/server.js](example/server.js) for example usage.
