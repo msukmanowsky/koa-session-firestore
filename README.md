@@ -2,6 +2,10 @@
 
 A Firebase Firestore store for the Node [Koa Framework](https://koajs.com/).
 
+Have a question? Feel free to book a slot to talk
+
+[![book a meeting](https://storage.googleapis.com/cb8c29pbm.appspot.com/book-a-meeting.svg)](https://calendly.com/mike-sukmanowsky/open-source-consulting-chat)
+
 # Installation
 
 ```
