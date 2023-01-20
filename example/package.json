@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@koa/router": "^8.0.2",
-    "firebase-admin": "^8.8.0",
+    "firebase-admin": "^11.5.0",
     "koa": "^2.11.0",
     "koa-session": "^5.12.3",
     "koa-session-firestore": "^0.1.0"
