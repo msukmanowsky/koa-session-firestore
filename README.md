@@ -2,9 +2,7 @@
 
 A Firebase Firestore store for the Node [Koa Framework](https://koajs.com/).
 
-Have a question? Feel free to book a slot to talk or [file an issue](https://github.com/msukmanowsky/koa-session-firestore/issues/new). 
-
-[![book a meeting](https://storage.googleapis.com/cb8c29pbm.appspot.com/book-a-meeting.svg)](https://calendly.com/mike-sukmanowsky/open-source-consulting-chat)
+Have a question? Feel free to book a slot to talk or [file an issue](https://github.com/msukmanowsky/koa-session-firestore/issues/new).
 
 # Installation
 
